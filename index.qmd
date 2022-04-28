@@ -1,5 +1,5 @@
 ---
-title: "Identify and Create Data Science Materials for your Learners"
+title: "Designing Domain-Specific Data Science Materials and Leveraging Long-Term Practice"
 subtitle: "PyCon 2022 Education Summit"
 
 author: "[Daniel Chen](https://daniel.rbind.io/)"
@@ -13,7 +13,7 @@ format:
     hash-type: number
 ---
 
-## Musqueam {.center}
+## Goshute {.center}
 
 <style>
 div.footnote {
@@ -21,7 +21,7 @@ div.footnote {
 }
 </style>
 
-<img src="img/intro/musqueam.png" alt="map of native lands in Vancouver, BC, Canada area" />
+<img src="img/intro/goshute.png" alt="map of native lands in Salt Lake City, Utah, USA area" />
 
 ::: footnote
 
@@ -71,9 +71,11 @@ div.footnote {
 :::
 ::::::
 
-## Thank You.
+## Thank You Again
 
-Add link to last year's talk for background info + allowing me to update
+https://us.pycon.org/2021/summits/education-training/
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/TmLnX7opisQ?start=3148" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!--
 
