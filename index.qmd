@@ -507,7 +507,7 @@ knitr::include_graphics("./img/040-learning_materials/summative-df.png")
 
 ::: {.column width="50%"}
 ```{r, out.width="100%"}
-knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+knitr::include_graphics("./img/040-learning_materials/summative-py.png")
 ```
 :::
 ::::::
@@ -518,13 +518,13 @@ knitr::include_graphics("./img/040-learning_materials/summative-r.png")
 ::: {.column width="50%"}
 
 ```{r, out.width="100%"}
-knitr::include_graphics("./img/040-learning_materials/summative-py.png")
+knitr::include_graphics("./img/040-learning_materials/summative-r.png")
 ```
 :::
 
 ::: {.column width="50%"}
 ```{r, out.width="100%"}
-knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+knitr::include_graphics("./img/040-learning_materials/summative-py.png")
 ```
 :::
 ::::::
@@ -591,7 +591,7 @@ knitr::include_graphics("./img/040-learning_materials/blooms-willingham.png")
 
 ::: {.column width="50%"}
 ```{r, out.width="100%"}
-knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+knitr::include_graphics("./img/040-learning_materials/summative-py.png")
 ```
 :::
 ::::::
@@ -794,6 +794,7 @@ knitr::include_graphics("./img/040-learning_materials/pre_post_long-lo_only-comp
 - Nursing & Data Science Collaboratory (slack)
 - OHDSI (MS Teams)
 - Observational Health Data Sciences and Informatics
+- Real Python: https://realpython.com/
 
 ::: footnote
 - Shrestha N, Barik T, Parnin C. Remote, but Connected: How #TidyTuesday Provides an Online Community of Practice for Data Scientists. Proc ACM Hum-Comput Interact. 2021;5(CSCW1):52:1-52:31. doi:10.1145/3449126
