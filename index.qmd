@@ -1,0 +1,835 @@
+---
+title: "Identify and Create Data Science Materials for your Learners"
+subtitle: "PyCon 2022 Education Summit"
+
+author: "[Daniel Chen](https://daniel.rbind.io/)"
+date: "Thursday, April 28, 2022"
+format:
+  revealjs:
+    footer: "[Daniel Chen](https://daniel.rbind.io/). @chendaniely. Using [Quarto](https://quarto.org/docs/presentations/revealjs/index.html). Slides: [https://github.com/chendaniely/2022-04-28-pycon2022-eduSummit-practice](https://github.com/chendaniely/2022-04-28-pycon2022-eduSummit-practice)"
+    theme: ["custom.scss"]
+    slide-number: c/t
+    show-slide-number: all
+    hash-type: number
+---
+
+## Musqueam {.center}
+
+<style>
+div.footnote {
+  font-size: 10px;
+}
+</style>
+
+<img src="img/intro/musqueam.png" alt="map of native lands in Vancouver, BC, Canada area" />
+
+::: footnote
+
+- https://native-land.ca/
+
+:::
+
+## Tutelo {.center}
+
+<img src="img/intro/tutelo.png" alt="map of native lands in eastern USA with arrow pointed to Blacksburg/Roanoke Virginia area in the Tutelo Tribe" />
+
+::: footnote
+
+- https://native-land.ca/
+
+:::
+
+## Thank You
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">I’m developing a presentation for <a href="https://twitter.com/seruff_?ref_src=twsrc%5Etfw">@seruff_</a> using <a href="https://twitter.com/quarto_pub?ref_src=twsrc%5Etfw">@quarto_pub</a> presentations.<br>I started to implement a similar theme as the xaringan <a href="https://twitter.com/RLadiesGlobal?ref_src=twsrc%5Etfw">@RLadiesGlobal</a> theme made by <a href="https://twitter.com/apreshill?ref_src=twsrc%5Etfw">@apreshill</a> !<br>If anyone wants to help to improve it, It would be awesome 💜 <a href="https://twitter.com/hashtag/rladies?src=hash&amp;ref_src=twsrc%5Etfw">#rladies</a> <a href="https://twitter.com/hashtag/RStats?src=hash&amp;ref_src=twsrc%5Etfw">#RStats</a> <a href="https://t.co/xps1v49Ku4">https://t.co/xps1v49Ku4</a> <a href="https://t.co/sK9d3X3unE">pic.twitter.com/sK9d3X3unE</a></p>&mdash; Beatriz Milz (@BeaMilz) <a href="https://twitter.com/BeaMilz/status/1515327145471578120?ref_src=twsrc%5Etfw">April 16, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+## Daniel Chen, PhD, MPH {.center}
+
+:::::: columns
+::: {.column width="40%"}
+<center>
+
+<a href='mailto:chendaniely@gmail.com'><i class="far fa-envelope"></i></a>
+<a href='https://twitter.com/chendaniely'><i class="fab fa-twitter"></i>
+<a href='https://github.com/chendaniely'><i class="fab fa-github"></i></a>
+<a href='https://twitch.tv/chendaniely'><i class="fab fa-twitch"></i></a>
+@chendaniely
+
+<img src="img/foto.jpeg" alt="Daniel Chen" style="border-radius: 50%; max-width: 70%;"/>
+
+</center>
+:::
+
+::: {.column width="60%"}
+- Postdoctoral Research and Teaching Fellow, UBC, MDS-Vancouver
+
+- Data Science Educator, RStudio, PBC ([RStudio Academy](https://www.rstudio.com/academy/))
+
+- The Carpentries
+
+- Author, [Pandas for Everyone](https://www.pearson.com/us/higher-education/program/Chen-Pandas-for-Everyone-Python-Data-Analysis/PGM335102.html)
+:::
+::::::
+
+## Thank You.
+
+Add link to last year's talk for background info + allowing me to update
+
+<!--
+
+# Data Science Education
+
+## Current Status of Data Science Education
+
+```{r}
+knitr::include_graphics("./img/010-ds_edu/song-2016-bachelors_masters.png")
+```
+
+::: footnote
+- Song IY, Zhu Y. Big data and data science: what should we teach? Expert Systems. 2016;33(4):364-373. doi:https://doi.org/10.1111/exsy.12130
+:::
+
+## Most People Are Missing "Data" Classes
+
+```{r}
+knitr::include_graphics("./img/010-ds_edu/kross-2020-dedicated_courses.png")
+```
+
+::: footnote
+- Kross S, Peng RD, Caffo BS, Gooding I, Leek JT. The Democratization of Data Science Education. The American Statistician. 2020;74(1):1-7. doi:10.1080/00031305.2019.1668849
+:::
+
+## The Data Science Cycle
+
+```{r}
+knitr::include_graphics("./img/010-ds_edu/data_science_cycles.png")
+```
+
+
+::: footnote
+- Bargagliotti A, Franklin C, Arnold P, et al. Pre-K-12 Guidelines for Assessment and Instruction in Statistics Education II (GAISE II): A Framework for Statistics and Data Science Education. American Statistical Association 2020.
+- Chen D. Data science figure. Published online December 2020. https://github.com/chendaniely/data_science-figure
+- D’Ignazio C, Bhargava R. DataBasic: Design Principles, Tools and Activities for Data Literacy Learners. The Journal of Community Informatics. 2016;12(3). doi:10.15353/joci.v12i3.3280
+- Wickham H, Grolemund G. R for Data Science: Import, Tidy, Transform, Visualize, and Model Data. O’Reilly Media; 2016. https://r4ds.had.co.nz/
+:::
+
+-->
+
+# Data Science in the Biomedical Science
+
+## Data Science Programs Are Too General
+
+- Data science programs target **single broad audiences**
+- Opportunity to **branch out** to different disciplines
+- Democratization of data science education enables more **domain specific** learning materials
+
+## Informatics Interest Outpace Opportunities
+
+```{r}
+knitr::include_graphics("./img/020-ds-biomed//banerjee-2015-interest_outpace_opportunities.png")
+```
+
+- Students who are interested in a clinical informatics related career
+- Not aware of training opportunities
+- Need to increase: quantity, quality, and publicity
+
+::: footnote
+- American Medical Association. Accelerating Change in Medical Education. American Medical Association. Accessed February 10, 2021. https://www.ama-assn.org/education/accelerating-change-medical-education
+- Banerjee R, George P, Priebe C, Alper E. Medical student awareness of and interest in clinical informatics. Journal of the American Medical Informatics Association. 2015;22(e1):e42-e47. doi:10.1093/jamia/ocu046
+:::
+
+
+## Excel
+
+```{r}
+knitr::include_graphics("./img/020-ds-biomed/excel-problem.png")
+```
+
+::: footnote
+- Lewis D. Autocorrect errors in Excel still creating genomics headache. Nature. Published online August 13, 2021. doi:10.1038/d41586-021-02211-4
+- Vincent J. Scientists rename human genes to stop Microsoft Excel from misreading them as dates. The Verge. Published August 6, 2020. Accessed December 8, 2021. https://www.theverge.com/2020/8/6/21355674/human-genes-rename-microsoft-excel-misreading-dates
+:::
+
+
+## Consequences of Reproducibility Failures
+
+```{r}
+knitr::include_graphics("./img/020-ds-biomed/ostblom-2021-reproducibility_failures.png")
+```
+
+::: footnote
+- Aboumatar, Hanan and Robert A. Wise (Oct. 2019). “Notice of Retraction. Aboumatar et al. Effect of a Program Combining Transitional Care and Long-Term Self-Management Support on Outcomes of Hospitalized Patients With Chronic Obstructive Pulmonary Disease: A Randomized Clinical Trial. JAMA. 2018;320(22):2335-2343.” In: JAMA 322.14, pp. 1417–1418. issn: 0098-7484. doi: 10.1001/jama.2019.11954
+- Kelion, Leo (Oct. 2020). “Excel: Why Using Microsoft’s Tool Caused Covid-19 Results to Be Lost”. en-GB. In: BBC News.
+- Ostblom J, Timbers T. Opinionated practices for teaching reproducibility: motivation, guided instruction and practice. arXiv:210913656 [cs, stat]. Published online September 17, 2021. Accessed November 30, 2021. http://arxiv.org/abs/2109.13656
+- Wallensteen, Lena et al. (2018). “Retraction notice to" Evaluation of behavioral problems after prenatal dexamethasone treatment in Swedish adolescents at risk of CAH"[Hormones and Behavior 85C (2016) 5-11]”. In: Hormonesand behavior 103, p. 140.
+- Whitehouse, Harvey et al. (July 2021). “Retraction Note: Complex Societies Precede Moralizing Gods throughout World History”. en. In: Nature 595.7866, pp. 320–320. issn: 1476-4687. doi: 10.1038/s41586-021-03656-3.
+- Zeeberg, Barry R et al. (2004). “Mistaken identifiers: gene name errors can be introduced inadvertently when using Excel in bioinformatics”. In: BMC bioinformatics 5.1, pp. 1–6.
+- Ziemann, Mark, Yotam Eren, and Assam El-Osta (2016). “Gene name errors are widespread in the scientific literature”. In: Genome biology 17.1, pp. 1–3
+:::
+
+## Successful R-based Test Package Submitted to FDA
+
+- Nov 22nd, 2021
+- R Consortium R submission Pilot 1 Project
+- R-language based submission package
+    - meet the needs and the expectations of the FDA reviewers
+    - assessing code review
+    - analyses reproducibility.
+
+::: footnote
+- R Consortium. Successful R-based Test Package Submitted to FDA. R Consortium. Published December 8, 2021. Accessed December 8, 2021. https://www.r-consortium.org/blog/2021/12/08/successful-r-based-test-package-submitted-to-fda. RConsortium.
+- RConsortium/Submissions-Pilot1-to-Fda. R Consortium; 2021. Accessed December 8, 2021. https://github.com/RConsortium/submissions-pilot1-to-fda
+:::
+
+## Backward Design Learning Materials
+
+1. Identify your learners (learner persona)
+2. Plan out your lesson content (concept maps)
+3. Define overall goal (summative assessment)
+4. Break down the goal (formative assessment)
+5. Outline the course
+6. Write a summary of the course
+
+::: footnote
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+# Identification of Biomedical Data Science Learner Persons
+
+Implications and Lessons Learned for Domain-Specific Data Science Curriculum
+
+## What are Personas?
+
+- Come from product design
+- Detailed description of an imaginary person
+- Embodies assumptions of the user and product
+- Cannot and should not represent every possible user
+
+::: footnote
+- Pruitt J, Adlin T. The Persona Lifecycle: Keeping People in Mind Throughout Product Design. 1st edition. Morgan Kaufmann; 2006.
+:::
+
+## Why use personas in education?
+
+- Minimize **discrepancies** on how people understand and communicate about users
+- Make implicit assumptions **explicit**
+- Stay focused on the **users** (user centric design)
+
+::: footnote
+- Pruitt J, Adlin T. The Persona Lifecycle: Keeping People in Mind Throughout Product Design. 1st edition. Morgan Kaufmann; 2006.
+:::
+
+## Creating a "Wrong" Persona
+
+- Still backed by data
+- "Product"is still consistent
+- Personas are a work in progress
+
+::: footnote
+- Pruitt J, Adlin T. The Persona Lifecycle: Keeping People in Mind Throughout Product Design. 1st edition. Morgan Kaufmann; 2006.
+:::
+
+## Creating Learner Personas {.smaller}
+
+- Self-assessment survey (33 questions)
+- Clustered to identify personas (23 Questions)
+- 2 Waves (N=67): Summer 2020 (N=51) + Summer 2021
+
+1. Demographics (6)
+1. Programs Used in the Past (1)
+1. *Programming Experience (6)
+1. *Data Cleaning and Processing Experience (4)
+1. *Project and Data Management (2)
+1. *Statistics (4)
+1. Workshop Framing and Motivation (3)
+1. *Summary Likert (7)
+
+::: footnote
+- Ambrose SA, Bridges MW, DiPietro M, Lovett MC, Norman MK. How Learning Works: Seven Research-Based Principles for Smart Teaching. John Wiley & Sons; 2010.<br />
+- Jordan KL, Michonneau F. Analysis of The Carpentries Long-Term Surveys (April 2020). Zenodo; 2020. doi:10.5281/zenodo.3728205.<br />
+- Jordan K, Michonneau F, Weaver B. Analysis of Software and Data Carpentry’s Pre- and Post-Workshop Surveys. Zenodo; 2018. doi:10.5281/zenodo.1325464.<br />
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+## Ocupation
+
+```{r}
+knitr::include_graphics("./img/030-personas/occupation.png")
+```
+
+<!--
+## General Attitudes: Summary Likert (7)
+
+```{r}
+knitr::include_graphics("./img/030-personas/summary_likert_all.png")
+```
+
+## Survey Validation: Selecting items for EFA {.smaller}
+
+:::::: columns
+::: {.column width="40%"}
+- 23 item
+- 67 responses
+- ~10 responses per item
+
+- 14 items for Exploratory Factor Analysis (EFA)
+- 20\% "significant" variables (wanted Q6)
+
+- "Significant":
+  - `p ≤ 0.05` and
+  - `|⍴| ≥ 0.5`
+:::
+
+::: {.column width="60%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/030-personas/efa-selection.png")
+```
+:::
+::::::
+
+::: footnote
+- Corrplot: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/020-validation/020-005-fa.Rmd#L143
+:::
+
+## Exploratory Factor Analysis {.smaller}
+
+:::::: columns
+::: {.column width="40%"}
+- Method: tenBerge
+- Rotation: Varimax
+- Rotation did not affect results
+- Factors: 3
+- Tried 2 -4
+- Factoring method: Principal axis factoring
+- Data was not normal for maximum likelihood
+- Shapiro-Wilk normality test
+:::
+
+::: {.column width="60%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/030-personas/efa-elbow.png")
+```
+:::
+::::::
+
+::: footnote
+- Using `psych::fa()`: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/020-validation/020-005-fa.Rmd#L287
+- Using `stats::factanal()`: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/020-validation/020-005-fa.Rmd#L592
+:::
+
+-->
+
+## EFA: Factor Loadings + Cronbah’s alpha {.smaller}
+
+:::::: columns
+::: {.column width="40%"}
+- PA1: Programming experience (7)
+  - 𝛼 = 0.96
+- PA2: Programming for data analysis (2)
+  - 𝛼 = 0.98
+- PA3: Solving technical problems (2)
+  - 𝛼 = 0.75
+:::
+
+::: {.column width="60%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/030-personas/efa-loadings.png")
+```
+
+- EFA Factor loadings < 0.5 are supressed
+- Cronbah’s 𝛼, loadings ≥ 0.6 were used
+:::
+::::::
+
+::: footnote
+- Alpha caluclated using `psych::alpha()`: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/020-validation/020-010-cronbah.Rmd#L76
+:::
+
+## Hierarchical Clustering for Personas
+
+```{r}
+knitr::include_graphics("./img/030-personas/dendrogram-3.png")
+```
+
+## Identifying Personas: Programming Experience
+
+```{r}
+knitr::include_graphics("./img/030-personas/q3.4-group.png")
+```
+
+## Identifying Personas: Programming for Analysis
+
+```{r}
+knitr::include_graphics("./img/030-personas/q7.2_7-group.png")
+```
+
+## Identifying Personas: Solving technical problems
+
+```{r}
+knitr::include_graphics("./img/030-personas/q4.2-group.png")
+```
+
+## Identifying Personas: Statistics
+
+```{r}
+knitr::include_graphics("./img/030-personas/q6.2-group.png")
+```
+
+## Identifying Personas: Excel
+
+```{r}
+knitr::include_graphics("./img/030-personas/q4.1-group.png")
+```
+
+## Hierarchical Clustering for Personas
+
+```{r}
+knitr::include_graphics("./img/030-personas/dendrogram-3-labeled.png")
+```
+
+## Overall Persona Differences
+
+1. Ash Academic
+2. Samir Student
+3. Clare Clinician
+
+```{r}
+knitr::include_graphics("./img/030-personas/persona-overall.png")
+```
+
+::: footnote
+- `stats::hclust()` for clustering: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/030-persona/03-pca_clustering.Rmd#L191
+- `stats:cutree()` for cutting the tree: https://github.com/chendaniely/dissertation-analysis/blob/master/analysis/030-persona/03-pca_clustering.Rmd#L222
+:::
+
+## Primary Target User
+
+```{r}
+knitr::include_graphics("./img/030-personas/persona-clare_clinician.png")
+```
+
+::: footnote
+- RStudio. Learner Personas. Published 2019. https://rstudio-education.github.io/learner-personas/
+:::
+
+## Biomedical Learner Persona Survey Conclusions
+
+1. First step in backward lesson decision: identify learners (learner personas)
+2. Have a way to create learner personas for the biomedical data science
+3. Survey tool validation allows others to create their own learner personas or help add to the current set of personas created in this study
+4. Identification of biomedical data science learner personas informs curriculum design
+
+# Assessing the Efficacy of Domain-Specific Data Science Curriculum in the Biomedical Sciences
+
+How Learner Personas Can Guide Educational Needs in the Short-Term and Long-Term
+
+## Backward Design
+
+1. Identify your learners (learner persona)
+2. Plan out your lesson content (concept maps)
+3. Define overall goal (summative assessment)
+4. Break down the goal (formative assessment)
+5. Outline the the course
+6. Write a summary of the course
+
+::: footnote
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+# Creating the Learning Materials
+
+<!--
+## Who Are Our Learners? {.smaller}
+
+- What do we know about their prior knowledge?
+
+:::::: columns
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/concept_maps.png")
+```
+
+- Concept maps
+- Task Deconstruction
+
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/dreyfus_model.png")
+```
+
+- Dreyfus model of skill acquisition
+
+:::
+::::::
+
+::: footnote
+- Ambrose SA, Bridges MW, DiPietro M, Lovett MC, Norman MK. How Learning Works: Seven Research-Based Principles for Smart Teaching. John Wiley & Sons; 2010.
+- Benner P. Using the Dreyfus Model of Skill Acquisition to Describe and Interpret Skill Acquisition and Clinical Judgment in Nursing Practice and Education. Bulletin of Science, Technology & Society. 2004;24(3):188-199. doi:10.1177/0270467604265061
+- Dreyfus SE, Dreyfus HL. A Five-Stage Model of the Mental Activities Involved in Directed Skill Acquisition. California Univ Berkeley Operations Research Center; 1980.
+- Koch C, Wilson G. Software carpentry: Instructor Training. Published online June 2016. doi:10.5281/zenodo.57571
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+-->
+
+## Managing Prior Knowledge
+
+- Concept maps: graphic of a mental model
+- Learner’s prior knowledge can help or hinder learning
+
+```{r}
+knitr::include_graphics("./img/040-learning_materials/concept_map_dreyfus.png")
+```
+
+::: footnote
+- Ambrose SA, Bridges MW, DiPietro M, Lovett MC, Norman MK. How Learning Works: Seven Research-Based Principles for Smart Teaching. John Wiley & Sons; 2010.
+- Benner P. Using the Dreyfus Model of Skill Acquisition to Describe and Interpret Skill Acquisition and Clinical Judgment in Nursing Practice and Education. Bulletin of Science, Technology & Society. 2004;24(3):188-199. doi:10.1177/0270467604265061
+- Dreyfus SE, Dreyfus HL. A Five-Stage Model of the Mental Activities Involved in Directed Skill Acquisition. California Univ Berkeley Operations Research Center; 1980.
+- Koch C, Wilson G. Software carpentry: Instructor Training. Published online June 2016. doi:10.5281/zenodo.57571
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+## Summative Assessment
+
+:::::: columns
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-df.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+```
+:::
+::::::
+
+## R + Python
+
+:::::: columns
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-py.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+```
+:::
+::::::
+
+## Are the Materials Effective?
+
+- Create the materials
+- Test retest design
+  - Pre, post, and long-term survey
+- Workshop not classroom setting
+- Assessment needs to be more flexible
+  - Questions need to be broken down for learners
+- Ask about confidence not objective assessment
+
+::: footnote
+- Jordan K. Data Carpentry Assessment Report: Analysis of Post-Workshop Survey Results. Zenodo; 2016. doi:10.5281/zenodo.165858
+- Jordan K. Analysis of The Carpentries Long-Term Impact Survey. Zenodo; 2018. doi:10.5281/zenodo.1402200
+- Jordan KL, Marwick B, Duckles J, Zimmerman N, Becker E. Analysis of Software Carpentry’s Post-Workshop Surveys. Zenodo; 2017. doi:10.5281/zenodo.1043533
+- Jordan KL, Marwick B, Weaver B, et al. Analysis of the Carpentries’ Long-Term Feedback Survey. Zenodo; 2017. doi:10.5281/zenodo.1039944
+- Jordan KL, Michonneau F. Analysis of The Carpentries Long-Term Surveys (April 2020). Zenodo; 2020. doi:10.5281/zenodo.3728205
+- Jordan K, Michonneau F, Weaver B. Analysis of Software and Data Carpentry’s Pre- and Post-Workshop Surveys. Zenodo; 2018. doi:10.5281/zenodo.1325464
+:::
+
+## Bloom’s Taxonomy
+
+:::::: columns
+::: {.column width="50%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/blooms-pyramid.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/blooms-willingham.png")
+```
+:::
+::::::
+
+- 2020 Computing Curriculum Guidelines: Knowledge-based -> Competency-based
+
+::: footnote
+- Anderson LW, Bloom BS, others. A Taxonomy for Learning, Teaching, and Assessing: A Revision of Bloom’s Taxonomy of Educational Objectives. Longman,; 2001.
+- Armstrong P. Bloom’s taxonomy. Vanderbilt University Center for Teaching. Published 2010. https://cft.vanderbilt.edu/guides-sub-pages/blooms-taxonomy/
+- Bloom’s Taxonomy—That Pyramid is a Problem. Teach Like a Champion. Published April 3, 2017. Accessed November 29, 2021. https://teachlikeachampion.com/blog/blooms-taxonomy-pyramid-problem/
+- CC2020 Task Force. Computing Curricula 2020: Paradigms for Global Computing Education. ACM; 2020. doi:10.1145/3467967
+- Donald Clark Plan B: Bogus pyramids: Learning methods, Maslow and Bloom. Donald Clark Plan B. Published July 13, 2020. Accessed November 17, 2021. https://donaldclarkplanb.blogspot.com/2020/07/bogus-pyramids-learning-methods-maslow.html
+:::
+
+## Learning Objectives {.smaller}
+
+:::::: columns
+::: {.column width="50%"}
+
+- Name the features of a tidy/clean dataset
+- Transform data for analysis
+- Identify when spreadsheets are useful
+- Assess when a task should not be done in a spreadsheet software
+- Break down data processing into smaller individual (and more manageable) steps
+- Construct a plot and table for exploratory data analysis
+- Calculate, interpret, and communicate an appropriate statistical analysis of the data
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+```
+:::
+::::::
+
+## Create Data Science Learning Materials
+
+:::::: columns
+::: {.column width="50%"}
+
+https://ds4biomed.tech/
+
+1. Introduction
+1. Spreadsheets
+1. R + RStudio
+1. Load Data
+1. Descriptive Calculations
+1. Clean Data (Tidy)
+1. Visualization (Intro)
+1. Analysis Intro (Logistic)
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/ds4biomed.png")
+```
+:::
+::::::
+
+## ds4biomed: https://ds4biomed.tech/
+
+:::::: columns
+::: {.column width="50%"}
+
+Part I
+
+1. Introduction
+1. Spreadsheets
+1. R + RStudio
+1. Load Data
+1. Descriptive Calculations
+1. Clean Data (Tidy)
+1. Visualization (Intro)
+1. Analysis Intro (Logistic)
+:::
+
+::: {.column width="50%"}
+
+Part II
+
+1. 30-Day Re-admittance
+1. Working with multiple datasets
+1. APIs
+1. Functions
+1. Survival Analysis
+1. Machine Learning Intro
+:::
+::::::
+
+# Assessing Workshop Effacy
+
+## Workshop Attendees
+
+:::::: columns
+::: {.column width="40%"}
+
+- 8 Workshops
+  - 200 Attendees across 2 days
+- 91 Responses
+  - 67 Pre-workshop
+  - 43 Post-workshop
+  - 11 Long-term
+:::
+
+::: {.column width="60%"}
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/workshop-survey-counts.png")
+```
+
+:::
+::::::
+
+<!--
+## Pre-Post Results Overall
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/pre_post-overall.png")
+```
+-->
+
+## Pre-Post Results Overall
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/pre_post-overall-prop_prop.png")
+```
+
+<!--
+## Post-Long Summative
+
+:::::: columns
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/post_long-summative.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/summative-r.png")
+```
+:::
+::::::
+
+-->
+
+## Pre-Post-Long Results
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/pre_post_long-results.png")
+```
+
+## Pre-Post-Long Composite
+
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/pre_post_long-composite.png")
+```
+
+## Learning Material Effectiveness Conclusions
+
+1. Learner Personas and Concept Maps Help Curate Lesson Content
+2. Language-Agnostic Lessons Guide Presentation Order
+3. Data Science Lessons Differ from Computer Science Lessons
+4. Intermediate Materials will be difficult to plan
+5. Long-Term Practice is important
+6. Work on Relevant Problems Solidify skills
+7. Communities of Practice Provide Ongoing Learning and Scalability
+
+
+# Practical Implications
+
+## How Can I Use This Information?
+
+- Can explore your own (patient) data
+- Can work on curating your own data
+
+- Potentially faster research-question cycle
+
+- Continuing education
+
+## Design Your Own Materials
+
+Create your own learner personas:
+
+1. Identify who your learners are
+2. Figure out what they need and want to know
+3. Plan a guided learning tract
+
+- Use the surveys I’ve made with the data I’ve published
+
+## Teaching Knowledge
+
+- Content Knowledge: What the instructor knows
+- Curricular Knowledge: Curriculum materials to teach the content
+
+- Pedagogical Content Knowledge: How to teach the content
+
+## Overall Conclusions {.smaller}
+
+:::::: columns
+::: {.column width="40%"}
+- Objective way of backward design lesson development
+- Domain-specific workshops seem beneficial to meet learning objectives
+- Data science have different set of programming skills
+- Long-term learning is more important
+- Formative + summative assessments in long-term learning
+- "10,000 hour rule",  "deliberate practice", "forgetting curve"
+:::
+
+::: {.column width="60%"}
+```{r, out.width="100%"}
+knitr::include_graphics("./img/040-learning_materials/pre_post_long-lo_only-composite.png")
+```
+:::
+::::::
+
+::: footnote
+- Malcolm Gladwell: 10,000 Hour Rule
+- László and Klara Polgár: deliberate practice
+- Hermann Ebbinghaus: forgetting curve
+:::
+
+## Communities (of Practice)
+
+- The Carpentires
+- r/medicine (slack), r/pharma
+- Tidy Tuesday*
+- R-Ladies: https://rladies.org/
+- Py-Ladies: https://pyladies.com/
+- R4DS Community (slack): r4ds.io/join
+- Nursing & Data Science Collaboratory (slack)
+- OHDSI (MS Teams)
+- Observational Health Data Sciences and Informatics
+
+::: footnote
+- Shrestha N, Barik T, Parnin C. Remote, but Connected: How #TidyTuesday Provides an Online Community of Practice for Data Scientists. Proc ACM Hum-Comput Interact. 2021;5(CSCW1):52:1-52:31. doi:10.1145/3449126
+:::
+
+## Teaching Tech Together: The Rules {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+1. **Be kind: all else is details.**
+2. Remember that you are not your learners…
+3. …that most people would rather fail than change…
+4. …and that ninety percent of magic consists of knowing one extra thing.
+5. Never teach alone.
+
+:::
+
+::: {.column width="50%"}
+
+6. Never hesitate to sacrifice truth for clarity.
+7. Make every mistake a lesson.
+8. Remember that no lesson survives first contact with learners…
+9. …that every lesson is too short for the teacher and too long for the learner…
+10. …and that nobody will be more excited about the lesson than you are.
+
+:::
+
+::::
+
+::: footnote
+- Wilson G. Teaching Tech Together: How to Make Your Lessons Work and Build a Teaching Community around Them. Taylor & Francis; 2019. http://teachtogether.tech
+:::
+
+<!-- inicio font awesome -->
+
+```{=html}
+<script src="https://kit.fontawesome.com/1f72d6921a.js" crossorigin="anonymous"></script>
+```
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css"> <!-- final font awesome -->
